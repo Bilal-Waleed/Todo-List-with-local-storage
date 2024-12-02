@@ -1,78 +1,177 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./boats-45a.jpg) no-repeat center center/cover;
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-height: 70vh; 
+  overflow-y: auto;
+}
+
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #333;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #0056b3, #003d80);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  flex-wrap: wrap;
+}
+
+li.done {
+  background: rgba(72, 201, 176, 0.6);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+li button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-width: 480px) {
   .container {
-    width: 90%;
-    max-width: 400px;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  h1 {
-    margin: 0 0 20px;
-  }
-  
-  form {
-    display: flex;
-    gap: 10px;
-  }
-  
-  input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-  }
-  
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    background-color: #fff;
+    border-radius: 8px;
+    max-width: 100%;
   }
-  
-  li.done {
-    text-decoration: line-through;
-    background-color: #d4edda;
+
+  h1 {
+    font-size: 1.4rem;
   }
-  
+
+  form {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  li {
+    padding: 8px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
   li button {
-    margin-left: 5px;
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px;
   }
-  
+
+  footer {
+    font-size: 0.6rem;
+  }
+}
